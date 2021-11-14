@@ -16,17 +16,10 @@ export class PersonInfoScreen extends Component {
 
     return (
       <View style={styles.container}>
-        <Image
-          source={{uri: person.picture.large}}
-          style={styles.avatar}
-          resizeMode={'contain'}
-        />
-        {this.renderRow([
-          {title: 'login', value: person.login.username},
-          {title: 'name', value: person.name.first},
-          {title: 'surname', value: person.name.last},
-          {title: 'email', value: person.email},
-          {title: 'phone', value: person.cell},
+              {this.renderRow([
+          {title: 'name', value: person.name},
+          {title: 'count', value: person.count},
+          {title: 'price', value: person.price}
         ])}
       </View>
     );

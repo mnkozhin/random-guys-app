@@ -6,16 +6,12 @@ export class PersonListItem extends Component {
 
     return (
       <TouchableOpacity style={styles.container} onPress={onPress}>
-        <Image
-          source={{uri: person.picture.medium}}
-          resizeMode={'contain'}
-          style={styles.avatar}
-        />
+        
         <View style={styles.col}>
           <Text style={styles.name}>
-            {person.name.first} {person.name.last}
+            {person.name}
           </Text>
-          <Text style={styles.email}>{person.email}</Text>
+          <Text style={styles.email}>{person.count}</Text>
         </View>
       </TouchableOpacity>
     );

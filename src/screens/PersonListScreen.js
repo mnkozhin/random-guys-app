@@ -16,7 +16,7 @@ export class PersonListScreen extends Component {
     const limit = 15;
     const offset = isRefreshing ? 0 : this.state.list.length;
     const page = Math.ceil(offset / limit) + 1;
-    fetch(`https://randomuser.me/api/?seed=foobar&results=15&page=${page}`)
+    fetch(`http://13.53.184.93:3000/products?&results=15&page=${page}`)
       .then((r) => r.json())
       .then((json) => {
         this.setState({
@@ -42,7 +42,7 @@ export class PersonListScreen extends Component {
     this.props.navigation.navigate('info', {person: item});
   };
 
-  keyExtractor = (person) => person.login.uuid;
+  keyExtractor = (person) => person.id;
 
   renderItem = ({item}) => {
     return (
